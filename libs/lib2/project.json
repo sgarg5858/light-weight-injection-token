@@ -1,0 +1,23 @@
+{
+  "projectType": "library",
+  "root": "libs/lib2",
+  "sourceRoot": "libs/lib2/src",
+  "prefix": "light-weight-injection-token",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/lib2"],
+      "options": {
+        "jestConfig": "libs/lib2/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/lib2/src/**/*.ts", "libs/lib2/src/**/*.html"]
+      }
+    }
+  },
+  "tags": []
+}

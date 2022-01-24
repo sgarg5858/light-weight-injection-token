@@ -3,10 +3,15 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { NxWelcomeComponent } from './nx-welcome.component';
-import {Lib1Module} from '@light-weight-injection-token/lib1'
+import { RouterModule } from '@angular/router';
+import {Lib2Module} from '@light-weight-injection-token/lib2';
 @NgModule({
   declarations: [AppComponent, NxWelcomeComponent],
-  imports: [BrowserModule,Lib1Module],
+  imports: [
+    BrowserModule,
+    RouterModule.forRoot([], { initialNavigation: 'enabledBlocking' }),
+    Lib2Module
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
